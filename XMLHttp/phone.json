@@ -1,0 +1,27 @@
+
+{
+    "phones":
+    [
+
+        {
+            "phone": "phone-1",
+            "description" :
+            [ 
+                " name : samsung " ,
+                " color : black "  ,
+                " price : 2000 DH "
+            ]
+        }
+        ,
+        {
+            "phone" :"phone-2",
+            "description" : 
+            [
+                " name : redmy " ,
+                " color :red  " ,
+                " price : 1700 DH "
+            ]
+        }
+ 
+    ]
+}
