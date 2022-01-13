@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.current-info{
+    background-color: rgba(24, 24, 27, 0.6);
+    padding: 31px;
+    border-radius: 10px;
+    margin: 64px 0;
+}
+.date-container{
+    font-size: 60px;
+    font-weight: 100;
+}
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+.current-info .date{
+    font-size: 30px;
+}
