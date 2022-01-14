@@ -57,7 +57,7 @@ async function getData(){
     for(var i=0 ; i< info_data.length ; i++){
         var dt = new Date(info_data[i].dt*1000);
         pushdata +=`
-        <div class="today" id="current-temp">
+        <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
             <img src="http://openweathermap.org/img/wn/${info_data[i].weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
             <div class="day">${dt.toDateString()}</div>
             <div class="day">humidity : ${info_data[i].humidity}%</div>
