@@ -53,46 +53,45 @@ async function getData(){
     var info_data = data.daily ;
     // console.log(info_data);
 
-                    // methode 1 for
+//                     // methode 1 for
 
-
-    var pushdata = "" ;
-    for(var i=0 ; i< info_data.length ; i++){
-        var dt = new Date(info_data[i].dt*1000);
-        pushdata +=`
-        <div class="today col-sm-12 col-md-6 col-lg-3 text-light"   id="current-temp">
-            <img src="http://openweathermap.org/img/wn/${info_data[i].weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-            <div class="day">${dt.toDateString()}</div>
-            <div class="day">humidity : ${info_data[i].humidity}%</div>
-            <div class="day">pressure : ${info_data[i].pressure}</div>
-            <div class="day">wind speed  : ${info_data[i].wind_speed}</div>
-            <div class="day">temperature min : ${info_data[i].temp.min}&#176;c</div>
-            <div class="day">temperature max : ${info_data[i].temp.max}&#176;c</div>
-            <div class="day">weather description : ${info_data[i].weather[0].description}</div>
+//     var pushdata = "" ;              
+// info_data.forEach(element => {
     
-        </div>`
-        currentWeatherItems.innerHTML = pushdata ;
-    }
+//         var dt = new Date(element.dt*1000);
+//         pushdata +=`
+//         <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
+//             <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+//             <div class="day">${dt.toDateString()}</div>
+//             <div class="day">humidity : ${element.humidity}%</div>
+//             <div class="day">pressure : ${element.pressure}</div>
+//             <div class="day">wind speed  : ${element.wind_speed}</div>
+//             <div class="day">temperature min : ${element.temp.min}&#176;c</div>
+//             <div class="day">temperature max : ${element.temp.max}&#176;c</div>
+//             <div class="day">weather description : ${element.weather[0].description}</div>
+//         </div>`
+//         currentWeatherItems.innerHTML = pushdata ;
+// });
 
                     // methode 2 forEach
 
-    // info_data.forEach(text);
-    // function text (element){
-    //     var pushdata = "" ;
-    //     var dt = new Date(element.dt*1000);
-    //     pushdata +=`
-    //     <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
-    //         <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-    //         <div class="day">${dt.toDateString()}</div>
-    //         <div class="day">humidity : ${element.humidity}%</div>
-    //         <div class="day">pressure : ${element.pressure}</div>
-    //         <div class="day">wind speed  : ${element.wind_speed}</div>
-    //         <div class="day">temperature min : ${element.temp.min}&#176;c</div>
-    //         <div class="day">temperature max : ${element.temp.max}&#176;c</div>
-    //         <div class="day">weather description : ${element.weather[0].description}</div>
-    //     </div>`
-    //     currentWeatherItems.innerHTML = pushdata ;
-    // }
+        var pushdata = "" ;              
+    info_data.forEach(element => {
+                        
+ var dt = new Date(element.dt*1000);
+                            pushdata +=`
+                            <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
+                                <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+                                <div class="day">${dt.toDateString()}</div>
+                                <div class="day">humidity : ${element.humidity}%</div>
+                                <div class="day">pressure : ${element.pressure}</div>
+                                <div class="day">wind speed  : ${element.wind_speed}</div>
+                                <div class="day">temperature min : ${element.temp.min}&#176;c</div>
+                                <div class="day">temperature max : ${element.temp.max}&#176;c</div>
+                                <div class="day">weather description : ${element.weather[0].description}</div>
+                            </div>`
+                            currentWeatherItems.innerHTML = pushdata ;
+                    });
     
 }
 getData()
