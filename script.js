@@ -51,7 +51,6 @@ async function getData(){
     console.log(data);
 
     var info_data = data.daily ;
-<<<<<<< HEAD
     // console.log(info_data);
 
 //                     // methode 1 for
@@ -94,27 +93,6 @@ async function getData(){
                             currentWeatherItems.innerHTML = pushdata ;
                     });
     
-=======
-    console.log(info_data);
-
-    var pushdata = "" ;
-    for(var i=0 ; i< info_data.length ; i++){
-        var dt = new Date(info_data[i].dt*1000);
-        pushdata +=`
-        <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
-            <img src="http://openweathermap.org/img/wn/${info_data[i].weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-            <div class="day">${dt.toDateString()}</div>
-            <div class="day">humidity : ${info_data[i].humidity}%</div>
-            <div class="day">pressure : ${info_data[i].pressure}</div>
-            <div class="day">wind speed  : ${info_data[i].wind_speed}</div>
-            <div class="day">temperature min : ${info_data[i].temp.min}&#176;c</div>
-            <div class="day">temperature max : ${info_data[i].temp.max}&#176;c</div>
-            <div class="day">weather description : ${info_data[i].weather[0].description}</div>
-    
-        </div>`
-        currentWeatherItems.innerHTML = pushdata ;
-    }
->>>>>>> parent of f354e5b (modifier html)
 }
 getData()
 
