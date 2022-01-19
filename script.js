@@ -78,7 +78,7 @@ async function getData(){
         var pushdata = "" ;              
     info_data.forEach(element => {
                         
- var dt = new Date(element.dt*1000);
+        var dt = new Date(element.dt*1000);
                             pushdata +=`
                             <div class="today col-sm-12 col-md-6 col-lg-3 text-light"  text id="current-temp">
                                 <img src="http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
